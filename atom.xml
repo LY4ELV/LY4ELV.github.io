@@ -3,11 +3,11 @@
   <title>LY4E</title>
   
   
-  <link href="/LY4ELV/atom.xml" rel="self"/>
+  <link href="/blog/atom.xml" rel="self"/>
   
-  <link href="http://clown.github.io/LY4ELV/"/>
+  <link href="http://clown.github.io/blog/"/>
   <updated>2019-05-14T10:02:20.844Z</updated>
-  <id>http://clown.github.io/LY4ELV/</id>
+  <id>http://clown.github.io/blog/</id>
   
   <author>
     <name>Clown</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>hexo个性化</title>
-    <link href="http://clown.github.io/LY4ELV/2019/05/14/hexo%E4%B8%AA%E6%80%A7%E5%8C%96/"/>
-    <id>http://clown.github.io/LY4ELV/2019/05/14/hexo个性化/</id>
+    <link href="http://clown.github.io/blog/2019/05/14/hexo%E4%B8%AA%E6%80%A7%E5%8C%96/"/>
+    <id>http://clown.github.io/blog/2019/05/14/hexo个性化/</id>
     <published>2019-05-14T10:01:31.000Z</published>
     <updated>2019-05-14T10:02:20.844Z</updated>
     
@@ -40,8 +40,8 @@
   
   <entry>
     <title>Hexo简单操作</title>
-    <link href="http://clown.github.io/LY4ELV/2019/05/14/Hexo%E7%AE%80%E5%8D%95%E6%93%8D%E4%BD%9C/"/>
-    <id>http://clown.github.io/LY4ELV/2019/05/14/Hexo简单操作/</id>
+    <link href="http://clown.github.io/blog/2019/05/14/Hexo%E7%AE%80%E5%8D%95%E6%93%8D%E4%BD%9C/"/>
+    <id>http://clown.github.io/blog/2019/05/14/Hexo简单操作/</id>
     <published>2019-05-14T03:33:41.000Z</published>
     <updated>2019-05-14T03:38:11.163Z</updated>
     
@@ -61,8 +61,8 @@
   
   <entry>
     <title>Hello World</title>
-    <link href="http://clown.github.io/LY4ELV/2019/05/13/hello-world/"/>
-    <id>http://clown.github.io/LY4ELV/2019/05/13/hello-world/</id>
+    <link href="http://clown.github.io/blog/2019/05/13/hello-world/"/>
+    <id>http://clown.github.io/blog/2019/05/13/hello-world/</id>
     <published>2019-05-13T09:31:47.313Z</published>
     <updated>2019-05-13T09:31:47.313Z</updated>
     
