@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>LY4E</title>
+  
+  
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://yoursite.com/"/>
+  <updated>2019-05-14T03:38:11.163Z</updated>
+  <id>http://yoursite.com/</id>
+  
+  <author>
+    <name>Clown</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Hexo简单操作</title>
+    <link href="http://yoursite.com/2019/05/14/Hexo%E7%AE%80%E5%8D%95%E6%93%8D%E4%BD%9C/"/>
+    <id>http://yoursite.com/2019/05/14/Hexo简单操作/</id>
+    <published>2019-05-14T03:33:41.000Z</published>
+    <updated>2019-05-14T03:38:11.163Z</updated>
+    
+    <content type="html"><![CDATA[<p>作为一个多年的iOS开发者，而且喜欢自己没事的时候写点东西以供他人分享，都想要有一个属于自己的、网址上带有自己名字的博客，有的人用简书或者GitHub来写文章，不过那些都是第三方平台，不是自己的，只有属于自己的一个博客才会显得很酷很装逼有没有??，OK接下来咱们开始搭建吧！</p><p>一、前言</p><p>该博客用的是Hexo框架，基于Node.js，搭建博客首先需要有一个GitHub账号并且配置了SSH Keys（申请步骤这里就不介绍了，网上教程很多），然后在GitHub里创建一个名为username.github.io的仓库，还需要安装Git、安装Node.js、安装Hexo</p><p>二、准备工作</p><p>1、创建GitHub仓库</p><p>创建一个名为username.github.io的仓库<br>在GitHub中新建仓库相信你们都会，点击New repository创建，注意：仓库名称一定是username.github.io这种格式，username替换一个你喜欢的名字。</p><p>username.github.io</p><p>2、安装Git</p><p>如果已安装可跳过</p><p>方法一、通过HomeBrew来安装</p><p>先安装HomeBrew（如果已安装可跳过）<br>终端执行命令   $ /usr/bin/ruby -e “$(curl -fsSL <a href="https://raw.githubusercontent.com/Homebrew/install/master/install)&quot;" target="_blank" rel="noopener">https://raw.githubusercontent.com/Homebrew/install/master/install)&quot;</a><br>然后安装git    $ brew install git</p><p>方法二、你也可以通过下载安装程序来安装</p><p>验证：执行git –version如果输出类似git version 2.15.0说明安装成功了</p><p>3、安装Node.js</p><p>先安装nvm，这是Node.js版本管理器，可以轻松切换Node.js版本。 这里有两种方式安装。如果使用curl的方式安装，安装完成之后一定要重启终端。</p><p>方法一、通过HomeBrew来安装（推荐）</p><p>$ brew install node</p><p>方法二、curl安装方式</p><p>$ curl <a href="https://raw.github.com/creationix/nvm/master/install.sh" target="_blank" rel="noopener">https://raw.github.com/creationix/nvm/master/install.sh</a> | sh<br>安装完成后，重启终端并执行下列命令即可安装 Node.js<br>$ nvm install stable</p><p>验证：执行npm –version如果输出类似5.5.1说明安装成功了</p><p>4、安装Hexo</p><p>所有必备的应用程序安装完成后，即可使用 npm 安装 Hexo</p><p>$ npm install -g hexo-cli</p><p>三、建站</p><p>1、创建资源</p><p>安装 Hexo 完成后，在你喜欢的目录下新建一个文件夹命名为username（替换成你喜欢的名字），然后cd到username文件夹下</p><p>$ cd username<br>$ hexo init<br>$ npm install</p><p>执行完毕后你将看到在你刚创建的文件夹下会有很多资源</p><p>username</p><p>2、基础配置</p><p>接下来打开username下的_config.yml文件（上图中的第一个文件），修改一下里面几个关键的信息，修改完记得保存，注意：冒号后面要有空格。</p><p>title: my_杨哥      //你博客的名字<br>author: Li Yang    //你的名字<br>language: zh-Hans  //语言-简体中文</p><p>上面这3个字段是关键信息，如需修改其他信息请参考配置</p><p>3、主题安装</p><p>username下的themes文件夹中存放的是主题，默认的是landscape主题，如果你不喜欢可以安装其他主题。</p><p>NexT主题是一套简约的主题，是目前使用最火的一个主题，下面我们安装一下该主题，你也可参考安装NexT。</p><p>Hexo还有更多主题供你选择</p><p>安装NexT主题：</p><p>$ cd username        //进入到username文件夹下<br>$ git clone <a href="https://github.com/iissnan/hexo-theme-next" target="_blank" rel="noopener">https://github.com/iissnan/hexo-theme-next</a> themes/next</p><p>启用NexT主题：</p><p>打开username下的_config.yml文件（上图中的第一个文件），找到theme字段将其值更改为next</p><p>验证主题：</p><p>注意：每次切换主题之后、验证主题之前都要清除 Hexo 的缓存</p><p>$ hexo clean    //清除缓存</p><p>开始验证：启动Hexo本地服务器</p><p>$ hexo s</p><p>然后你将会看到终端输出</p><p>INFO  Hexo is running at <a href="http://localhost:4000/" target="_blank" rel="noopener">http://localhost:4000/</a>. Press Ctrl+C to stop.</p><p>这行的意思是说你用浏览器打开 <a href="http://localhost:4000" target="_blank" rel="noopener">http://localhost:4000</a> 便可看到你的博客了，这只是本地的测试，如果测试没问题就执行Ctrl+C退出去，此时该地址就不能访问了。</p><p>OK，现在，你已经成功安装并启用了 NexT 主题。接下来就是对该主题的一些设置，详细可参考NexT主题设定</p><p>四、写作</p><p>以上所有的工作都完成了，并设置了一套你自己喜欢的主题样式，接下来就可以写博客了。</p><p>1、新建一篇文章</p><p>$ hexo new layout title</p><p>layout：模板，如果不写将使用默认模板，一般不写，直接$ hexo new title</p><p>title：文章标题，如果标题包含空格的话，请使用引号括起来。</p><p>新建的文章将会存在username/source/_posts中，_posts就是默认模板，文章文件名称将会是title.md，接下来就可以打开该文件进行编辑写你的文章了。</p><p>2、生成静态文件</p><p>写完文章之后执行，来生成静态网页文件</p><p>$ hexo g        //hexo generate的缩写</p><p>3、启动本地服务器</p><p>$ hexo s        //hexo server的缩写</p><p>本地服务器启动完之后就如同上面验证主题一样，访问 <a href="http://localhost:4000" target="_blank" rel="noopener">http://localhost:4000</a> 来验证一下你写的文章预览效果。</p><p>4、部署网站</p><p>安装部署工具</p><p>$ npm install hexo-deployer-git –save</p><p>安装完毕后打开username下的_config.yml文件，翻到最底部找到deploy节点编辑如下：</p><p>deploy:<br>  type: git<br>  repository: <a href="https://github.com/YoungerLi/youngerli.github.io.git" target="_blank" rel="noopener">https://github.com/YoungerLi/youngerli.github.io.git</a><br>  branch: master</p><p>其中<a href="https://github.com/YoungerLi/youngerli.github.io.git就是你GitHub中创建的仓库地址，在这复制即可" target="_blank" rel="noopener">https://github.com/YoungerLi/youngerli.github.io.git就是你GitHub中创建的仓库地址，在这复制即可</a></p><p>repository</p><p>最后，部署网站</p><p>$ hexo d        //hexo deploy的缩写</p><p>第一次执行这一步的时候会让你输入你的GitHub的用户名及密码，输入正确无误后执行完毕，任何人就可以访问 <a href="https://youngerli.github.io" target="_blank" rel="noopener">https://youngerli.github.io</a> 进入你的博客了。</p><p>以后每次写完文章之后依次执行以下命令就可以发布更新了</p><p>$ hexo clean      // 清除缓存<br>$ hexo g          // 生成静态网页文件<br>$ hexo d          // 将本地博客发布到github</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;作为一个多年的iOS开发者，而且喜欢自己没事的时候写点东西以供他人分享，都想要有一个属于自己的、网址上带有自己名字的博客，有的人用简书或者GitHub来写文章，不过那些都是第三方平台，不是自己的，只有属于自己的一个博客才会显得很酷很装逼有没有??，OK接下来咱们开始搭建吧！
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="http://yoursite.com/2019/05/13/hello-world/"/>
+    <id>http://yoursite.com/2019/05/13/hello-world/</id>
+    <published>2019-05-13T09:31:47.313Z</published>
+    <updated>2019-05-13T09:31:47.313Z</updated>
+    
+    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+</feed>
