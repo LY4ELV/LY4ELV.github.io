@@ -152,6 +152,111 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-hexo个性化" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/blog/2019/05/14/hexo个性化/">hexo个性化</a>
+    </h1>
+  
+
+        
+        <a href="/blog/2019/05/14/hexo个性化/" class="archive-article-date">
+  	<time datetime="2019-05-14T10:01:31.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-14</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <ol>
+<li>修改站点配置<br>打开站点配置文件 ，找到：<h1 id="Site"><a href="#Site" class="headerlink" title="Site"></a>Site</h1>title: Hexo<br>subtitle:<br>description:<br>keywords:<br>author: John Doe<br>language:<br>timezone:<br>根据自己的需要去修改上边的配置，这些配置的注释如下：<h1 id="Site-1"><a href="#Site-1" class="headerlink" title="Site"></a>Site</h1><h1 id="站点标题"><a href="#站点标题" class="headerlink" title="站点标题"></a>站点标题</h1>title: Hexo<h1 id="站点副标题"><a href="#站点副标题" class="headerlink" title="站点副标题"></a>站点副标题</h1>subtitle:<h1 id="站点描述"><a href="#站点描述" class="headerlink" title="站点描述"></a>站点描述</h1>description:<h1 id="站点关键词"><a href="#站点关键词" class="headerlink" title="站点关键词"></a>站点关键词</h1>keywords:<h1 id="站点主人"><a href="#站点主人" class="headerlink" title="站点主人"></a>站点主人</h1>author: John Doe<h1 id="站点语言"><a href="#站点语言" class="headerlink" title="站点语言"></a>站点语言</h1>language:<h1 id="站点时区"><a href="#站点时区" class="headerlink" title="站点时区"></a>站点时区</h1>timezone:<br>1.1 language<br>目前 NexT 支持的语言如下：<br>语言<br>language<br>English<br>en<br>简体中文<br>zh-Hans<br>Français<br>fr-FR<br>Português<br>pt或者pt-BR<br>繁體中文<br>zh-hk或者zh-tw<br>Русский язык<br>ru<br>Deutsch<br>de<br>日本語<br>ja<br>Indonesian<br>id<br>Korean<br>ko<br>1.2 timezone<br>Hexo 默认使用电脑的时区，也可以自己配置，比如：<br>UTC+8</li>
+<li>安装新主题<br>Hexo有很多大佬开发的主题，很多人使用的是NexT主题，该主题也确实挺简洁好看的，新版本的NexT主题还可以选择四个主题。<br>那么怎么安装新的Hexo主题呢？<br>在我们的Hexo项目路径下，可以看到有个 themes 文件夹，这个文件夹就是用于存放主题文件的。<br>2.1 下载 NexT 主题<br>首先在Hexo项目的路径下打开命令窗口，如果你没有配置好Git的环境变量，请使用Git Bash。<br>git clone <a href="https://github.com/iissnan/hexo-theme-next" target="_blank" rel="noopener">https://github.com/iissnan/hexo-theme-next</a> themes/next<br>注意，当前路径是你的Hexo项目根目录，使用上边的命令才能正确地将 Next 主题clone到themes文件夹下的next文件夹里。<br>接下来你会看到 themes 下多了个 next 文件夹，点进去你会看到个.git文件夹，将该文件夹删掉，否则到时候你无法将整个完整的Hexo项目push到GitHub上。<br>2.2 启用 NexT 主题<br>在Hexo项目中，有两个重要的配置文件 _config.yml；这两个配置文件一个在项目根目录下，一个在主题目录下。<br>前者是站点配置文件，后者是主题配置文件，顾名思义，一个是Hexo项目的配置选项，一个是主题文件的配置选项。<br>打开站点配置文件，用Windows自带的笔记本是无法打开该文件的，请使用其他的编辑器来打开，常见的编辑器有Notepad++，UltraEdit，EditPlus等。<br>在站点配置文件中，找到：<h1 id="Extensions"><a href="#Extensions" class="headerlink" title="Extensions"></a>Extensions</h1><h2 id="Plugins-https-hexo-io-plugins"><a href="#Plugins-https-hexo-io-plugins" class="headerlink" title="Plugins: https://hexo.io/plugins/"></a>Plugins: <a href="https://hexo.io/plugins/" target="_blank" rel="noopener">https://hexo.io/plugins/</a></h2><h2 id="Themes-https-hexo-io-themes"><a href="#Themes-https-hexo-io-themes" class="headerlink" title="Themes: https://hexo.io/themes/"></a>Themes: <a href="https://hexo.io/themes/" target="_blank" rel="noopener">https://hexo.io/themes/</a></h2>theme: landscape<br>默认的博客主题就是这个，我们将其修改为next；这里的主题是指在 themes 文件夹下的对应主题的文件夹名字。<br>注意，在配置文件中所有的属性的值，都必须和前边的 : 之间留一个空格。比如下边的写法就是错误的，不加上空格的话会出错。<br>theme:landscape<br>2.3 选择对应主题的外观 Scheme<br>打开主题配置文件，找到下边的选项：<h1 id="—————————————————————"><a href="#—————————————————————" class="headerlink" title="—————————————————————"></a>—————————————————————</h1><h1 id="Scheme-Settings"><a href="#Scheme-Settings" class="headerlink" title="Scheme Settings"></a>Scheme Settings</h1><h1 id="—————————————————————-1"><a href="#—————————————————————-1" class="headerlink" title="—————————————————————"></a>—————————————————————</h1></li>
+</ol>
+<h1 id="Schemes"><a href="#Schemes" class="headerlink" title="Schemes"></a>Schemes</h1><p>scheme: Muse</p>
+<p>#scheme: Mist</p>
+<p>#scheme: Pisces</p>
+<p>#scheme: Gemini<br>默认会使用Muse作为Next主题的外观，通过将某个scheme前边的#去掉来启动某个外观，如下：</p>
+<h1 id="—————————————————————-2"><a href="#—————————————————————-2" class="headerlink" title="—————————————————————"></a>—————————————————————</h1><h1 id="Scheme-Settings-1"><a href="#Scheme-Settings-1" class="headerlink" title="Scheme Settings"></a>Scheme Settings</h1><h1 id="—————————————————————-3"><a href="#—————————————————————-3" class="headerlink" title="—————————————————————"></a>—————————————————————</h1><h1 id="Schemes-1"><a href="#Schemes-1" class="headerlink" title="Schemes"></a>Schemes</h1><p>#scheme: Muse</p>
+<p>#scheme: Mist</p>
+<p>#scheme: Pisces<br>scheme: Gemini<br>2.4 验证新主题<br>依然是老操作——启动调试模式服务器：<br>hexo s –debug<br>启动成功后，使用浏览器访问<a href="http://localhost:4000/，看看博客能否访问成功。" target="_blank" rel="noopener">http://localhost:4000/，看看博客能否访问成功。</a></p>
+<ol start="3">
+<li>修改 Next 主题配置<br>主题配置文件 _config.yml 位于 themes\next 之下。<br>3.1 头像设置<br>打开主题配置文件，找到如下：<h1 id="侧边栏头像"><a href="#侧边栏头像" class="headerlink" title="侧边栏头像"></a>侧边栏头像</h1><h1 id="Sidebar-Avatar"><a href="#Sidebar-Avatar" class="headerlink" title="Sidebar Avatar"></a>Sidebar Avatar</h1><h1 id="in-theme-directory-source-images-images-avatar-gif"><a href="#in-theme-directory-source-images-images-avatar-gif" class="headerlink" title="in theme directory(source/images): /images/avatar.gif"></a>in theme directory(source/images): /images/avatar.gif</h1><h1 id="in-site-directory-source-uploads-uploads-avatar-gif"><a href="#in-site-directory-source-uploads-uploads-avatar-gif" class="headerlink" title="in site  directory(source/uploads): /uploads/avatar.gif"></a>in site  directory(source/uploads): /uploads/avatar.gif</h1><h1 id="头像的路径可以放在主题对应文件夹的source里，也可以放在站点根目录的source里，建议放在站点路径上"><a href="#头像的路径可以放在主题对应文件夹的source里，也可以放在站点根目录的source里，建议放在站点路径上" class="headerlink" title="头像的路径可以放在主题对应文件夹的source里，也可以放在站点根目录的source里，建议放在站点路径上"></a>头像的路径可以放在主题对应文件夹的source里，也可以放在站点根目录的source里，建议放在站点路径上</h1>#avatar: /images/avatar.gif<br>将avatar前边的#去掉，接着配置图片的路径即可。<br>3.2 网站图标<br>打开主题配置文件，找到如下：<h1 id="将你的网站图标放到-站点根目录-source-推荐）或者hexo-site-themes-next-source-images-目录下"><a href="#将你的网站图标放到-站点根目录-source-推荐）或者hexo-site-themes-next-source-images-目录下" class="headerlink" title="将你的网站图标放到{站点根目录}/source/ (推荐）或者hexo-site/themes/next/source/images/目录下"></a>将你的网站图标放到<code>{站点根目录}/source/</code> (推荐）或者<code>hexo-site/themes/next/source/images/</code>目录下</h1><h1 id="默认的Next主题的网站图标放在-站点根目录-themes-next-source-images-目录下"><a href="#默认的Next主题的网站图标放在-站点根目录-themes-next-source-images-目录下" class="headerlink" title="默认的Next主题的网站图标放在{站点根目录}/themes/next/source/images/目录下"></a>默认的Next主题的网站图标放在<code>{站点根目录}/themes/next/source/images/</code>目录下</h1><h1 id="如果你想将自己的网站图标放到-站点根目录-source-根目录下，必须将-images从路径中去掉"><a href="#如果你想将自己的网站图标放到-站点根目录-source-根目录下，必须将-images从路径中去掉" class="headerlink" title="如果你想将自己的网站图标放到{站点根目录}/source/根目录下，必须将/images从路径中去掉"></a>如果你想将自己的网站图标放到<code>{站点根目录}/source/</code>根目录下，必须将<code>/images</code>从路径中去掉</h1><h1 id="如果你将网站图标放到了-站点根目录-source-images路径下，需要令网站图标的名字和-站点根目录-themes-next-source-images-路径下的网站图标不同，否则网站图标会使用后者的同名图标"><a href="#如果你将网站图标放到了-站点根目录-source-images路径下，需要令网站图标的名字和-站点根目录-themes-next-source-images-路径下的网站图标不同，否则网站图标会使用后者的同名图标" class="headerlink" title="如果你将网站图标放到了{站点根目录}/source/images路径下，需要令网站图标的名字和{站点根目录}/themes/next/source/images/路径下的网站图标不同，否则网站图标会使用后者的同名图标"></a>如果你将网站图标放到了<code>{站点根目录}/source/images</code>路径下，需要令网站图标的名字和<code>{站点根目录}/themes/next/source/images/</code>路径下的网站图标不同，否则网站图标会使用后者的同名图标</h1>favicon:<br>small: /images/favicon-16x16-next.png<br>medium: /images/favicon-32x32-next.png<br>apple_touch_icon: /images/apple-touch-icon-next.png<br>safari_pinned_tab: /images/logo.svg<br>#android_manifest: /images/manifest.json<br>#ms_browserconfig: /images/browserconfig.xml<br>这里需要注意的是，网站图标一般是.ico或者.gif的类型，而且图标的大小一般只有几k而已，可以使用下边的网站制作个人的网站图标，建议先将原本的图标弄成正方形的。<br>在线制作ico图标<br>3.3 菜单设置<br>打开主题配置文件，找到如下：<h1 id="如果该站点是运行在子目录之下（比如：domain-tld-blog；这里的blog就是指我们的博客，前边的是上一级的域名），需要将路径前的斜杠去掉（-archives-gt-archives；即是将原本的绝对路径改成了相对路径）。"><a href="#如果该站点是运行在子目录之下（比如：domain-tld-blog；这里的blog就是指我们的博客，前边的是上一级的域名），需要将路径前的斜杠去掉（-archives-gt-archives；即是将原本的绝对路径改成了相对路径）。" class="headerlink" title="如果该站点是运行在子目录之下（比如：domain.tld/blog；这里的blog就是指我们的博客，前边的是上一级的域名），需要将路径前的斜杠去掉（/archives -&gt; archives；即是将原本的绝对路径改成了相对路径）。"></a>如果该站点是运行在子目录之下（比如：domain.tld/blog；这里的blog就是指我们的博客，前边的是上一级的域名），需要将路径前的斜杠去掉（/archives -&gt; archives；即是将原本的绝对路径改成了相对路径）。</h1><h1 id="用法：Key：-link-菜单图标"><a href="#用法：Key：-link-菜单图标" class="headerlink" title="用法：Key：/link/ || 菜单图标"></a>用法：<code>Key：/link/ || 菜单图标</code></h1><h1 id="Key就是菜单名，如果对该菜单名进行了国际化，即将其翻译放到对应的languages文件夹中，将会根据你设置的语言进行加载对应的菜单名翻译；如果没有设置翻译，则会使用这里的Key作为菜单名。这里的Key是大小写敏感的。"><a href="#Key就是菜单名，如果对该菜单名进行了国际化，即将其翻译放到对应的languages文件夹中，将会根据你设置的语言进行加载对应的菜单名翻译；如果没有设置翻译，则会使用这里的Key作为菜单名。这里的Key是大小写敏感的。" class="headerlink" title="Key就是菜单名，如果对该菜单名进行了国际化，即将其翻译放到对应的languages文件夹中，将会根据你设置的语言进行加载对应的菜单名翻译；如果没有设置翻译，则会使用这里的Key作为菜单名。这里的Key是大小写敏感的。"></a>Key就是菜单名，如果对该菜单名进行了国际化，即将其翻译放到对应的languages文件夹中，将会根据你设置的语言进行加载对应的菜单名翻译；如果没有设置翻译，则会使用这里的Key作为菜单名。这里的Key是大小写敏感的。</h1><h1 id="在-分隔符之前的值是该菜单对应的路径"><a href="#在-分隔符之前的值是该菜单对应的路径" class="headerlink" title="在||分隔符之前的值是该菜单对应的路径"></a>在<code>||</code>分隔符之前的值是该菜单对应的路径</h1><h1 id="在-分隔符之后的值是FontAwesome的图标（不懂的请百度什么是FontAwesome以及其用法），如果不指定图标，将会自动使用question这个图标。"><a href="#在-分隔符之后的值是FontAwesome的图标（不懂的请百度什么是FontAwesome以及其用法），如果不指定图标，将会自动使用question这个图标。" class="headerlink" title="在||分隔符之后的值是FontAwesome的图标（不懂的请百度什么是FontAwesome以及其用法），如果不指定图标，将会自动使用question这个图标。"></a>在<code>||</code>分隔符之后的值是FontAwesome的图标（不懂的请百度什么是FontAwesome以及其用法），如果不指定图标，将会自动使用question这个图标。</h1></li>
+</ol>
+<p>menu:<br>  home: / || home</p>
+<p>  #about: /about/ || user</p>
+<p>  #tags: /tags/ || tags</p>
+<p>  #categories: /categories/ || th<br>  archives: /archives/ || archive</p>
+<p>  #schedule: /schedule/ || calendar</p>
+<p>  #sitemap: /sitemap.xml || sitemap</p>
+<p>  #commonweal: /404/ || heartbeat<br>使用方法很简单，依然是将需要展示的菜单的前边的#去掉就行，更加具体的操作信息我已经在上边的注释中给出了。<br>3.4 标签分类<br>首先我们需要新建页面，在站点根目录打开命令窗口，分别输入命令：<br>hexo n page “categories”<br>hexo n page “tags”<br>hexo n page “about”<br>接着你会发现在根目录的 source 目录下多出了上边的三个文件夹，里面各自有一个 index.md 文件。如果之前我们将menu里的categories，tags，about三个菜单解开了封印，那么在创建好这三个页面后就可以成功访问到，否则会报404请求错误。<br>3.5 社交链接</p>
+<h1 id="如果不指定图标，会默认使用globe图标"><a href="#如果不指定图标，会默认使用globe图标" class="headerlink" title="如果不指定图标，会默认使用globe图标"></a>如果不指定图标，会默认使用globe图标</h1><p>#social:</p>
+<p>  #GitHub: <a href="https://github.com/yourname" target="_blank" rel="noopener">https://github.com/yourname</a> || github</p>
+<p>  #E-Mail: mailto:<a href="mailto:yourname@gmail.com" target="_blank" rel="noopener">yourname@gmail.com</a> || envelope</p>
+<p>  #Google: <a href="https://plus.google.com/yourname" target="_blank" rel="noopener">https://plus.google.com/yourname</a> || google</p>
+<p>  #Twitter: <a href="https://twitter.com/yourname" target="_blank" rel="noopener">https://twitter.com/yourname</a> || twitter</p>
+<p>  #FB Page: <a href="https://www.facebook.com/yourname" target="_blank" rel="noopener">https://www.facebook.com/yourname</a> || facebook</p>
+<p>  #VK Group: <a href="https://vk.com/yourname" target="_blank" rel="noopener">https://vk.com/yourname</a> || vk</p>
+<p>  #StackOverflow: <a href="https://stackoverflow.com/yourname" target="_blank" rel="noopener">https://stackoverflow.com/yourname</a> || stack-overflow</p>
+<p>  #YouTube: <a href="https://youtube.com/yourname" target="_blank" rel="noopener">https://youtube.com/yourname</a> || youtube</p>
+<p>  #Instagram: <a href="https://instagram.com/yourname" target="_blank" rel="noopener">https://instagram.com/yourname</a> || instagram</p>
+<p>  #Skype: skype:yourname?call|chat || skype<br>老规矩，去掉#注释就可以启动。<br>/***</p>
+<ul>
+<li></li>
+<li>.-<del>~</del><del>~~-._       _.-</del><del>~</del>~~-.</li>
+<li><strong>.’  欢迎访问    ~.   .~              `.</strong></li>
+<li>.’//  我的个人博客    ./   ☞                   ☜   \`.</li>
+<li>.’//                     |                     \`.</li>
+<li>.’// .-~”””””””<del>~~-._     |     _,-</del>~~”””””””~-. \`.</li>
+<li>.’//.-“                 <code>-.  |  .-&#39;                 &quot;-.\\</code>.</li>
+<li>.’//<strong>__</strong>.============-..   \ | /   ..-============.<strong>__</strong>\`.</li>
+<li>.’<strong><strong><strong><strong><strong><strong><strong>__</strong></strong></strong></strong></strong></strong></strong>|/<strong><strong><strong><strong><strong><strong><strong>__</strong></strong></strong></strong></strong></strong></strong>`.<br>*/</li>
+</ul>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/blog/2019/05/14/hexo个性化/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="layout-Hexo简单操作" class="article article-type-layout  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
